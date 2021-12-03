@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Async Demo</title>
+</head>
+
+<body>
+    <button>Click me</button>
+    <script id="demo-fetch-then">
+        document.querySelector('button').addEventListener('click', onClick);
+
+        function onClick() {
+            const req = makeRequest('https://swapi.dev/api/planets/1/')
+            req
+                .then(data => console.log(data))
+                .catch(error => console.log(error));
+        }
+
+        function makeRequest(url) {
+            return new Promise((resolve, reject) => {
+                fetch(url)                                 // promise that the request will be progress
+                    .then(resposne => {                    // response from the first promise 
+                        if (resposne.ok == false) {        // EROR HANDELING
+                            throw new Error(`${resposne.status} ${resposne.statusText}`);
+                        }
+                        return respose.json();             // promise that we will receive the body of the response
+                    })
+                    .then(data => resolve)                // content of the promise
+                    .catch(reject);
+            });
+        }
+    </script>
+</body>
+
+<body>
+    <button>Click me</button>
+    <script id="demo-asynchronous-function">
+        document.querySelector('button').addEventListener('click', makeRequest);
+
+        async function makeRequest() {
+            try {
+                const response = await fetch('https://swapi.dev/api/planets/1/');
+                if (response.ok == false) {
+                    throw new Error(`${resposne.status} ${resposne.statusText}`);
+                }
+
+                const data = await response.json();
+            } catch(error) {
+                console.log(error.message);
+            }
+        }
+    </script>
+</body>
+
+</html>

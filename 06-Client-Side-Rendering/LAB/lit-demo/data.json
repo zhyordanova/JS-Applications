@@ -1,0 +1,26 @@
+[
+    {
+        "title": "Fisrst Article",
+        "content": "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Quidem, laborum dolor assumenda aut omnis nihil, quos dolore praesentium, suscipit amet nemo error adipisci totam! Ad perferendis cum necessitatibus fugiat obcaecati.",
+        "author": "John Smith",
+        "color": "red",
+        "comments": []
+    },
+
+    {
+        "title": "Second Article",
+        "content": "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Quidem, laborum dolor assumenda aut omnis nihil, quos dolore praesentium, suscipit amet nemo error adipisci totam! Ad perferendis cum necessitatibus fugiat obcaecati.",
+        "author": "Peter Johnson",
+        "color": "green",
+        "disabled": true,
+        "comments": []
+    },
+
+    {
+        "title": "Third Article",
+        "content": "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Quidem, laborum dolor assumenda aut omnis nihil, quos dolore praesentium, suscipit amet nemo error adipisci totam! Ad perferendis cum necessitatibus fugiat obcaecati.",
+        "author": "Graham Smith",
+        "color": "blue",
+        "comments": []
+    }
+]

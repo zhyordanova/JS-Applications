@@ -1,0 +1,19 @@
+[
+    {
+        "title": "Fisrst Article",
+        "content": "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Quidem, laborum dolor assumenda aut omnis nihil, quos dolore praesentium, suscipit amet nemo error adipisci totam! Ad perferendis cum necessitatibus fugiat obcaecati.",
+        "author": "John Smith"
+    },
+
+    {
+        "title": "Second Article",
+        "content": "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Quidem, laborum dolor assumenda aut omnis nihil, quos dolore praesentium, suscipit amet nemo error adipisci totam! Ad perferendis cum necessitatibus fugiat obcaecati.",
+        "author": "Peter Johnson"
+    },
+
+    {
+        "title": "Third Article",
+        "content": "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Quidem, laborum dolor assumenda aut omnis nihil, quos dolore praesentium, suscipit amet nemo error adipisci totam! Ad perferendis cum necessitatibus fugiat obcaecati.",
+        "author": "Graham Smith"
+    }
+]
