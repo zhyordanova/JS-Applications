@@ -56,7 +56,7 @@ export async function createPage(ctx) {
         }
 
         if (Object.values(car).some(x => !x)) {
-            return alert('All fields are required!')
+            return alert('All fields are required!');
         }
 
         await createCar(car);

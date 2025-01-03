@@ -102,5 +102,4 @@ async function loadTopic(id, onCommentSubmit) {
     const isOwner = userData && userData.id == topic._ownerId;
 
     return topicCard(topic, isOwner, comments, createSubmitHandler(onCommentSubmit, 'content'));
-
 }

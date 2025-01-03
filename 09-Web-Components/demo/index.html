@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Components Demo</title>
+    <style>
+        p {
+            background-color: red;
+        }
+    </style>
+</head>
+<body>
+
+    <template id='my-template'>
+        <article>
+            <h2>Title</h2>
+            <div>
+                <p>Article content</p>
+            </div>
+        </article>
+    </template>
+
+    <h1>Components Demo</h1>
+    <p>Standard paragraph</p>
+    <button id='btn'>Click Here</button> 
+    <my-element>Hi</my-element>
+
+    <script type="module">
+
+        document.getElementById('btn').addEventListener('click', () => {
+
+        });
+
+        class MyComponent extends HTMLElement{
+            constructor() {
+                super();
+
+                this.attachShadow({ mode: 'open' });
+
+                const pElement = document.createElement('p');
+                pElement.textContent = 'Paragraph inside shadow DOM';
+
+                this.shadowRoot.appendChild(pElement);
+
+                const style = document.createElement('style');
+                style.innerHTML = `p {
+                    color: blue;
+                }`;
+
+                this.shadowRoot.appendChild(style);
+            }
+
+        }
+
+        window.customElements.define('my-element', MyComponent);
+    </script>
+    
+</body>
+</html>
